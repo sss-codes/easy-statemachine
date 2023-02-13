@@ -1,7 +1,7 @@
 # easy-statemachine
 
 #### 介绍
-Easy Statemachine是一个轻量级的、无状态的、基于事件驱动的状态机框架，比spring-statemachine更易用，可以便捷的嵌入到Spring MVC / Spring Boot项目中，统一控制状态流转，避免随处编写状态更改语句造成后续难以修改扩展。
+Easy Statemachine是一个轻量级的、基于事件驱动的状态机框架，可以便捷的嵌入到Spring MVC / Spring Boot项目中，统一控制状态流转，避免随处编写状态更改语句造成后续难以修改扩展。
 
 #### 软件架构
 软件架构说明

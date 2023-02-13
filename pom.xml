@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.2.2.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
+    <groupId>fans.java</groupId>
+    <artifactId>easy-statemachine</artifactId>
+    <version>1.0.0</version>
+    <packaging>pom</packaging>
+    <name>easy-statemachine</name>
+    <description>easy-statemachine</description>
+
+    <modules>
+        <module>easy-statemachine-demo</module>
+    </modules>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>1.8</java.version>
+        <lombok.version>1.18.10</lombok.version>
+        <commons.lang3.version>3.7</commons.lang3.version>
+        <commons.collection.version>4.4</commons.collection.version>
+        <easy.statemachine.version>1.0.0</easy.statemachine.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons.lang3.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-collections4</artifactId>
+                <version>${commons.collection.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>fans.java</groupId>
+                <artifactId>easy-statemachine-core</artifactId>
+                <version>${easy.statemachine.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>
