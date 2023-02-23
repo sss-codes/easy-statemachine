@@ -9,14 +9,8 @@ import fans.java.esm.core.component.StateMachine;
  * @author sss
  */
 public interface StateMachineBuilder<S, E, C, R> {
-    /**
-     * 状态间流转
-     */
     TransitionBuilder<S, E, C, R> external();
 
-    /**
-     * 状态内部流转
-     */
     TransitionBuilder<S, E, C, R> internal();
 
     StateMachine<S, E, C, R> build(String machineId);

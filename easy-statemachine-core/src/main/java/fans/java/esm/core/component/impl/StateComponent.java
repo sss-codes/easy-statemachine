@@ -66,14 +66,6 @@ public class StateComponent<S, E, C, R> implements StateInterface<S, E, C, R> {
     }
 
     @Override
-    public Collection<Transition<S, E, C, R>> getAllTransitions() {
-        return eventMultiTransitionMap.values()
-                .stream()
-                .flatMap(List::stream)
-                .collect(Collectors.toList());
-    }
-
-    @Override
     public boolean equals(Object anObject) {
         if (anObject instanceof StateInterface) {
             StateInterface other = (StateInterface) anObject;

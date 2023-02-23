@@ -19,6 +19,4 @@ public interface StateInterface<S, E, C, R> {
 
     List<Transition<S, E, C, R>> getEventTransitionList(E event);
 
-    Collection<Transition<S, E, C, R>> getAllTransitions();
-
 }

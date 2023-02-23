@@ -11,7 +11,7 @@ import fans.java.esm.core.domain.EventUser;
 public interface ContextAttrKey {
 
     /**
-     * 当前登录用户
+     * 用户
      */
     AttrKey<EventUser> EVENT_USER = AttrKey.of("EVENT_USER");
 

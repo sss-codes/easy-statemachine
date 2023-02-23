@@ -6,8 +6,7 @@ import fans.java.esm.core.component.StateMachine;
 import fans.java.esm.core.component.Transition;
 import fans.java.esm.core.exception.EsmException;
 import fans.java.esm.core.factory.StateComponentFactory;
-import fans.java.esm.core.persistence.EventLogPersistInterface;
-import fans.java.esm.core.persistence.StatePersistInterface;
+import fans.java.esm.core.persistence.TransitionPersistInterface;
 import lombok.Data;
 import org.apache.commons.collections4.CollectionUtils;
 import org.springframework.stereotype.Component;
@@ -28,10 +27,7 @@ import java.util.stream.Stream;
 public class StateMachineComponent<S, E, C, R> implements StateMachine<S, E, C, R> {
 
     @Resource
-    private StatePersistInterface<S, E, C> statePersistInterface;
-
-    @Resource
-    private EventLogPersistInterface<S, E, C> eventLogPersistInterface;
+    private TransitionPersistInterface<S, E, C> transitionPersistInterface;
 
     private String machineId;
 
@@ -54,13 +50,11 @@ public class StateMachineComponent<S, E, C, R> implements StateMachine<S, E, C, 
     }
 
     private void beforeTransit(S sourceState, S targetState, E event, C context) {
-        statePersistInterface.beforeAction(sourceState, targetState, event, context);
-        eventLogPersistInterface.beforeAction(sourceState, targetState, event, context);
+        transitionPersistInterface.beforeTransit(sourceState, targetState, event, context);
     }
 
     private void afterTransit(S sourceState, S targetState, E event, C context) {
-        statePersistInterface.afterAction(sourceState, targetState, event, context);
-        eventLogPersistInterface.afterAction(sourceState, targetState, event, context);
+        transitionPersistInterface.afterTransit(sourceState, targetState, event, context);
     }
 
     private List<Transition<S, E, C, R>> getTransitionList(S sourceState, E event, C context) {
