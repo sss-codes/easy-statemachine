@@ -17,7 +17,6 @@ import org.springframework.stereotype.Component;
 @Component
 @Slf4j
 public class PayHandler extends AbstractExternalEsmHandler<StateEnum, EventEnum, EsmContext, StateEnum> {
-
     @Override
     public StateEnum[] fromStates() {
         return new StateEnum[]{StateEnum.WAIT_PAY};

@@ -11,14 +11,11 @@ import lombok.Getter;
 @AllArgsConstructor
 @Getter
 public enum StateEnum {
-
     INIT("ESM000", "任务初始化"),
     WAIT_PAY("ESM001", "待支付"),
     PAYED("ESM002", "已支付"),
     CANCELED("ESM003", "取消"),
     ;
-
-    private final String statusCode;
-    private final String statusName;
-
+    private final String stateCode;
+    private final String stateName;
 }

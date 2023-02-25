@@ -17,7 +17,6 @@ import org.springframework.stereotype.Component;
 @Component
 @Slf4j
 public class ModifyInfoHandler extends AbstractInternalEsmHandler<StateEnum, EventEnum, EsmContext, String> {
-
     @Override
     public StateEnum[] withinStates() {
         return new StateEnum[]{StateEnum.WAIT_PAY, StateEnum.PAYED};
