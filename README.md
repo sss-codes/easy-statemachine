@@ -30,7 +30,7 @@ Easy Statemachine是一个轻量级的、基于事件驱动的状态机框架，
 <dependency>
     <groupId>fans.java</groupId>
     <artifactId>easy-statemachine-core</artifactId>
-    <version>${statemachine.version}</version>
+    <version>1.0.1</version>
 </dependency>
 ```
 
