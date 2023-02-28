@@ -1,5 +1,9 @@
 # easy-statemachine
 
+您的Star是我继续前进的动力，如果喜欢请右上角帮忙Star⭐!
+
+如果有意见建议，欢迎issues！
+
 ### 介绍
 
 Easy Statemachine是一个轻量级的、基于事件驱动的状态机框架，可以便捷的嵌入到Spring项目中，统一控制状态流转，避免随处编写状态更改语句造成后续难以修改扩展。
@@ -197,13 +201,6 @@ String o3 = EsmUtil.processEvent(StateEnum.WAIT_PAY, EventEnum.MODIFY_INFO, esmC
 2. 新建 Feat_xxx 分支
 3. 提交代码
 4. 新建 Pull Request
-
-### 参考学习
-
-[spring-statemachine](https://github.com/spring-projects/spring-statemachine)
-
-[COLA](https://github.com/alibaba/COLA)
-
 
 ### 特技
 
